@@ -20,12 +20,12 @@ Base URL: `https://api.tvmaze.com`
 
 Documentazione: [https://www.tvmaze.com/api](https://www.tvmaze.com/api)
 
-| Endpoint | Contenuto utile |
-| --- | --- |
-| `GET /shows?page={n}` | Elenco paginato di serie (rating, generi, premiere, network, …) |
-| `GET /shows/{id}` | Dettaglio di una serie |
-| `GET /shows/{id}/episodes` | Episodi (stagione, numero, airdate, runtime, rating, …) |
-| `GET /shows/{id}?embed=episodes` | Alternativa: serie + episodi in una sola risposta |
+| Endpoint                         | Contenuto utile                                                 |
+| -------------------------------- | --------------------------------------------------------------- |
+| `GET /shows?page={n}`            | Elenco paginato di serie (rating, generi, premiere, network, …) |
+| `GET /shows/{id}`                | Dettaglio di una serie                                          |
+| `GET /shows/{id}/episodes`       | Episodi (stagione, numero, airdate, runtime, rating, …)         |
+| `GET /shows/{id}?embed=episodes` | Alternativa: serie + episodi in una sola risposta               |
 
 Note operative:
 
@@ -42,7 +42,7 @@ Note operative:
 
 **Criterio di ranking:** voto medio (`rating.average`), non il peso (`weight`) né altri campi.
 
-**Output atteso.** Il report deve essere un JSON che, per entrambi i periodi (all time e anno di riferimento), elenca fino a tre serie in classifica. Per ogni serie in classifica devono essere presenti, in qualunque annidamento tu scelga:
+**Output atteso.** Il report deve essere un JSON che, per entrambi i periodi (all time e anno di riferimento),TypePageShows elenca fino a tre serie in classifica. Per ogni serie in classifica devono essere presenti, in qualunque annidamento tu scelga:
 
 - la posizione in classifica;
 - l’identificativo della serie;
