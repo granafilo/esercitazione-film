@@ -15,7 +15,7 @@ const lastDate = getDate(allShows, LAST_YEAR, false);
 
 export const getReport1 = () => {
   const data = new Date(Date.now());
-  return JSON.stringify(
+  const report = JSON.stringify(
     {
       title: `Top 3 Film per rating - ultimo anno`,
       date: `${data.getDay()} - ${data.getMonth()} - ${data.getFullYear()}`,
@@ -50,4 +50,6 @@ export const getReport1 = () => {
     null,
     1,
   );
+
+  console.log(report);
 };
