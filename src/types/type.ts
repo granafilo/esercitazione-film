@@ -25,7 +25,7 @@ export type TypeShow = {
 };
 
 export type TypeRating = {
-  average: number | null;
+  average: number;
 };
 
 export type TypePageShows = TypeShow[];
