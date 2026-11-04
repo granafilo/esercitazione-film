@@ -24,53 +24,72 @@ export type TypeShow = {
   _links: TypeLinks;
 };
 
-export type TypeRating = {
+type TypeRating = {
   average: number;
 };
 
 export type TypePageShows = TypeShow[];
 
-export type TypeSchedule = {
+type TypeSchedule = {
   time: string; // formato orario "HH:mm"
   days: string[];
 };
 
-export type TypeNetwork = {
+type TypeNetwork = {
   id: number;
   name: string;
   country: TypeCountry;
   officialSite: string | null;
 };
 
-export type TypeCountry = {
+type TypeCountry = {
   name: string;
   code: string;
   timezone: string;
 };
 
-export type TypeExternals = {
+type TypeExternals = {
   tvrage: number;
   thetvdb: number;
   imdb: string;
 };
 
-export type TypeImage = {
+type TypeImage = {
   medium: string;
   original: string;
 };
 
-export type TypeLinks = {
+type TypeLinks = {
   self: TypeSelfLinks;
   previousepisode: TypeEpisode;
 };
 
-export type TypeSelfLinks = {
+type TypeSelfLinks = {
   href: string;
 };
 
-export type TypeEpisode = {
+type TypeEpisode = {
   href: string;
   name: string;
 };
 
-export type TypeGenres = string[];
+type TypeGenres = string[];
+
+export type TypeEpisodes = {
+  id: number;
+  url: string;
+  name: string;
+  season: number;
+  number: number;
+  type: string;
+  airdate: string;
+  airtime: string;
+  airstamp: string;
+  runtime: number;
+  rating: TypeRating;
+  image: TypeImage;
+  summary: string;
+  _links: TypeLinks;
+};
+
+export type TypeShowEpisodes = TypeEpisodes[];
